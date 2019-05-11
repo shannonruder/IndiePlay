@@ -6,16 +6,5 @@ import axios from "axios";
 export default {
   getIndieArtistEvents: function() {
     return axios.get("http://localhost:3001/api/events/ticketMaster ")    
-  },
-
-
-  getRandomDog: function() {
-    return axios.get("https://dog.ceo/api/breeds/image/random");
-  },
-  getDogsOfBreed: function(breed) {
-    return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
-  },
-  getBaseBreedsList: function() {
-    return axios.get("https://dog.ceo/api/breeds/list");
   }
 };

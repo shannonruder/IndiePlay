@@ -42,8 +42,12 @@ module.exports = {
       .then((response) => {
         const events = response.data._embedded.events;
         const trimmedData = events.map((event) => {
+          console.log(event)
+          const img = event.images[3]
+
           const shapedData = {
             name: event.name,
+            image: img
             // venue: event.venue.location... etc
           }
           return shapedData
